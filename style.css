@@ -1,0 +1,131 @@
+:root {
+    --primary-color: #0d6efd;
+    --dark-color: #121212;
+    --light-bg: #f8f9fa;
+    --text-gray: #6c757d;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    transition: all 0.3s ease;
+    padding: 1rem 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.custom-nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.custom-nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, var(--dark-color) 0%, #1e293b 100%);
+    color: white;
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.service-card, .portfolio-card, .team-card {
+    border: none;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    background: #fff;
+}
+
+.service-card:hover, .portfolio-card:hover, .team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background: rgba(13, 110, 253, 0.1);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.portfolio-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 220px;
+    background-color: #eee;
+}
+
+.portfolio-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.team-avatar-placeholder {
+    height: 180px;
+    background-color: var(--light-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    border-bottom: 1px solid #eee;
+}
+
+.team-avatar-placeholder i {
+    font-size: 4rem;
+}
+
+section {
+    padding: 100px 0;
+}
+
+footer {
+    background: var(--dark-color);
+    color: rgba(255,255,255,0.7);
+    padding: 60px 0 20px;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .hero-title { font-size: 2.5rem; }
+    section { padding: 60px 0; }
+}
